@@ -1,0 +1,43 @@
+.modal {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.current.modal {
+    opacity: 1;
+    pointer-events: fill;
+}
+
+.modal .card-container {
+    margin: 1vh;
+    border: solid;
+    background-color: var(--background);
+}
+
+.contact {
+    text-align: center;
+}
+
+.modal .title {
+    font-family: "Roboto Slab";
+}
+
+.modal .card:before {
+    content: none;
+}
+
+.about * {
+    pointer-events: none;
+}

@@ -1,0 +1,134 @@
+.projects {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-container {
+    height: fit-content;
+    width: 30ch;
+    max-width: 90vw;
+    position: relative;
+    margin: 5vh;
+    transition-duration: 500ms;
+    transition-property: transform;
+    border-radius: 8px;
+    scroll-snap-align: center;
+
+    mask-image: url('#content-mask');
+
+    cursor: pointer;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    background-color: var(--background);
+    transform-style: preserve-3d;
+
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.card-container:hover, .card-container:focus {
+    transform: rotateZ(-0.005turn) translateY(-10px);
+}
+
+.card-container>.card:before {
+    content: "";
+    left: 0;
+    right: 0;
+    width: auto;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--grey);
+    position: absolute;
+    transform: scaleX(0);
+    transition-duration: 500ms;
+    transform-origin: right;
+}
+
+.card-container:hover>.card::before, .card-container:focus>.card::before {
+    transform: scaleX(1);
+}
+
+.card-container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    transition-duration: 500ms;
+    transition-property: transform;
+    border-radius: 5px;
+}
+
+.card-container:hover::before, .card-container:focus::before {
+    transform: translate3d(-10px, 20px, -50px);
+}
+
+.project-img {
+    width: 100%;
+    height: 20ch;
+    background-color: rgb(36, 36, 80);
+    background-size: cover;
+    background-position: center;
+    border-bottom: solid var(--theme-color);
+}
+
+.title {
+    font-family: "Roboto Slab Thin";
+    font-size: 2rem;
+    align-self: flex-end;
+    flex: 1;
+    padding: 5px;
+    padding-left: 10px;
+    width: auto;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    color: var(--light);
+    transition-duration: 500ms;
+}
+
+.card-container:hover .title, .card-container:focus .title {
+    color: var(--theme-color);
+}
+
+.description {
+    color: var(--light);
+    padding: 5px;
+    padding-bottom: 2ch;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    font-family: "Nanum Gothic";
+}
+
+.project-language {
+    font-family: "Roboto Slab";
+    position: absolute;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 50%;
+    background-color: var(--background);
+    color: var(--theme-color);
+    border: solid var(--theme-color);
+    height: 50px;
+    width: 50px;
+    bottom: -25px;
+    right: -25px;
+    overflow: hidden;
+    transition-duration: 200ms;
+    transform-origin: center;
+}
+
+*:hover>.project-language {
+    transform: scale(1.2);
+}

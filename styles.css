@@ -1,0 +1,50 @@
+html, body {
+    color: var(--grey);
+    font-family: "Raleway";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background);
+}
+
+body * {
+    align-self: center;
+    justify-self: center;
+}
+
+*:focus {
+    outline: none;
+}
+
+* {
+    --background: rgb(20, 16, 18);
+    --background-alpha: rgba(20, 16, 18, 0);
+
+    --mint: rgb(139, 216, 174);
+    --cyan: rgb(101, 185, 241);
+    --orange: rgb(241, 162, 59);
+
+    --grey: rgb(95, 80, 70);
+    --light: rgb(189, 178, 168);
+}
+
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('RobotoSlab-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Slab Thin';
+    src: url('RobotoSlab-Thin.woff');
+}
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url('NanumGothic-Regular.woff');
+}

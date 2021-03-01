@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BusinessCard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="card.css">
+  <link rel="stylesheet" href="modal.css">
+
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <div class="logo">M·Bartoldus</div>
+  <nav class="navbar">
+    <ul class="nav-buttons">
+      <li><a tabindex="0" id="contact-button" class="magic-underline">Contact</a></li>
+      <li><a tabindex="0" id="about-button" class="magic-underline">About</a></li>
+  </nav>
+
+  <div class="projects" id="projects"></div>
+
+  <div class="content-mask" id="content-mask"></div>
+
+  <div class="modal contact" id="contact">
+    <div class="card-container contact-link" tabindex="0" style="--index: 0; --theme-color: var(--orange)"
+      data-href="tel:202-805-0332">
+      <div class="card">
+        <div class="title">phone</div>
+        <div class="description">202-805-0332</div>
+      </div>
+    </div>
+    <div class="card-container contact-link" tabindex="0" style="--index: 0; --theme-color: var(--mint)"
+      data-href="https://github.com/mBartoldus">
+      <div class="card">
+        <div class="title">github</div>
+        <div class="description">github.com/mBartoldus</div>
+      </div>
+    </div>
+    <div class="card-container contact-link" tabindex="0" style="--index: 0; --theme-color: var(--cyan)"
+      data-href="mailto:mbartoldus@gmail.com">
+      <div class="card">
+        <div class="title">email</div>
+        <div class="description">mbartoldus@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal about" id="about">
+    <div class="card-container">
+      <div class="card">
+        <div class="title">About me</div>
+        <div class="description">work-in-progress</div>
+        <div class="description">likes: lentils</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
