@@ -19,7 +19,7 @@ function Project(api_item) {
         "https://mbartoldus.github.io/" + api_item.name :
         api_item.svn_url
     let lang = api_item.language
-    lang = lang == "JavaScript" ? "js" : lang
+    lang = lang == "JavaScript" || !lang ? "js" : lang // assume javascript if no language is given
     let theme_color
     switch (lang) {
         case "js": theme_color = "mint"
