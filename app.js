@@ -15,9 +15,7 @@ function Div(classes, options) {
 }
 
 function Project(api_item) {
-    let url = api_item.has_pages ?
-        "https://mbartoldus.github.io/" + api_item.name :
-        api_item.svn_url
+    let url = api_item.svn_url
     let lang = api_item.language
     lang = lang == "JavaScript" || !lang ? "js" : lang // assume javascript if no language is given
     let theme_color
