@@ -26,8 +26,8 @@ function Project(api_item) {
             break
         case "C++": theme_color = "orange"
             break
-        case "html":
-        case "css": theme_color = "cyan"
+        case "HTML":
+        case "CSS": theme_color = "cyan"
             break
         default: theme_color = "grey"
     }
